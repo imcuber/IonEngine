@@ -1,0 +1,15 @@
+[submodule "IonEngine/extern/glfw"]
+	path = IonEngine/extern/glfw
+	url = https://github.com/glfw/glfw/
+[submodule "IonEngine/extern/assimp"]
+	path = IonEngine/extern/assimp
+	url = https://github.com/assimp/assimp
+[submodule "IonEngine/extern/bullet3"]
+	path = IonEngine/extern/bullet3
+	url = https://github.com/bulletphysics/bullet3/
+[submodule "IonEngine/extern/glm"]
+	path = IonEngine/extern/glm
+	url = https://github.com/g-truc/glm
+[submodule "IonEngine/extern/imgui"]
+	path = IonEngine/extern/imgui
+	url = https://github.com/ocornut/imgui
