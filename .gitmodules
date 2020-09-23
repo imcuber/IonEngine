@@ -13,3 +13,9 @@
 [submodule "IonEngine/extern/imgui"]
 	path = IonEngine/extern/imgui
 	url = https://github.com/ocornut/imgui
+[submodule "IonEngine/extern/fmt"]
+	path = IonEngine/extern/fmt
+	url = https://github.com/fmtlib/fmt
+[submodule "IonEngine/extern/sol2"]
+	path = IonEngine/extern/sol2
+	url = https://github.com/ThePhD/sol2

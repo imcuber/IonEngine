@@ -39,3 +39,9 @@ target_include_directories(stb_image PUBLIC "${CMAKE_CURRENT_LIST_DIR}/stb_image
 # bullet3
 add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/bullet3")
 set(BULLET3_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_LIST_DIR}/bullet3/src" PARENT_SCOPE)
+
+# fmt
+add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/fmt")
+
+# sol2 v3
+add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/sol2")
