@@ -19,25 +19,12 @@ public:
         }
     }
 
-    bool onEvent(IonEngine::Events::Event& e)
+    bool onEvent(IonEngine::Event& e)
     {
-        //ION_LOG_INFO("{}", e);
-        if(IonEngine::Events::EventType::WindowClosed == e.getType()) {
+        ION_LOG_INFO("{}", e);
+        if(IonEngine::EventType::WindowClosed == e.getType()) {
             running = false;
         }
-        
-        IonEngine::Events::EventDispatcher dispatcher(e);
-
-        auto eventfn = [](IonEngine::Events::KeyPressedEvent& e) -> bool {
-            if(IonEngine::Input::Key::Q == e.key) {
-                //auto [x, y] = IonEngine::Input::InputState::getMousePosition();
-                //ION_LOG_INFO("Polled position: {} {}", x, y);
-                ION_LOG_INFO("e is down: {}", IonEngine::Input::InputState::isKeyPressed(IonEngine::Input::Key::E));
-            }
-            return true;
-        };
-
-        dispatcher.dispatch<IonEngine::Events::KeyPressedEvent>(eventfn);
 
         return true;
     }

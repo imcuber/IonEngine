@@ -85,6 +85,15 @@ namespace IonEngine::Events {
 
 std::ostream& operator<<(std::ostream& os, const IonEngine::Events::Event& e);
 
+namespace IonEngine {
+
+    using EventCategory = IonEngine::Events::EventCategory;
+    using EventType = IonEngine::Events::EventType;
+    using Event = IonEngine::Events::Event;
+    using EventDispatcher = IonEngine::Events::EventDispatcher;
+
+}
+
 #include <IonEngine/Events/ApplicationEvents.h>
 #include <IonEngine/Events/InputEvents.h>
 #include <IonEngine/Events/WindowEvents.h>

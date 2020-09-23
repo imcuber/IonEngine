@@ -74,4 +74,15 @@ namespace IonEngine::Events {
     };
 }
 
+namespace IonEngine {
+
+    using WindowEvent = IonEngine::Events::WindowEvent;
+    using WindowClosedEvent = IonEngine::Events::WindowClosedEvent;
+    using WindowFocusedEvent = IonEngine::Events::WindowFocusedEvent;
+    using WindowLostFocusEvent = IonEngine::Events::WindowLostFocusEvent;
+    using WindowResizedEvent = IonEngine::Events::WindowResizedEvent;
+    using WindowMovedEvent = IonEngine::Events::WindowMovedEvent;
+
+}
+
 #endif // IONENGINE_EVENTS_WINDOWEVENTS_H

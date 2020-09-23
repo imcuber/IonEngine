@@ -85,4 +85,10 @@ namespace IonEngine::Utility {
 
 }
 
+namespace IonEngine {
+
+    using LogSeverityLevel = IonEngine::Utility::Logger::SeverityLevel;
+
+}
+
 #endif // IONENGINE_UTILITY_LOGGER_H

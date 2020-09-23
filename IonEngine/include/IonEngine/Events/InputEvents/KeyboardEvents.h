@@ -52,4 +52,13 @@ namespace IonEngine::Events {
     };
 }
 
+namespace IonEngine {
+
+    using KeyboardEvent = IonEngine::Events::KeyboardEvent;
+    using KeyPressedEvent = IonEngine::Events::KeyPressedEvent;
+    using KeyRepeatedEvent = IonEngine::Events::KeyRepeatedEvent;
+    using KeyReleasedEvent = IonEngine::Events::KeyReleasedEvent;
+
+}
+
 #endif // IONENGINE_EVENTS_INPUTEVENTS_KEYBOARDEVENTS_H

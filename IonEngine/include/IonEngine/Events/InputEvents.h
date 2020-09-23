@@ -33,6 +33,13 @@ namespace IonEngine::Events {
 
 }
 
+namespace IonEngine {
+
+    using InputEvent = IonEngine::Events::InputEvent;
+    using CharInputEvent = IonEngine::Events::CharInputEvent;
+
+}
+
 #include <IonEngine/Events/InputEvents/KeyboardEvents.h>
 #include <IonEngine/Events/InputEvents/MouseEvents.h>
 

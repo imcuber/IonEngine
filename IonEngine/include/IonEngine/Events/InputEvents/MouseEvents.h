@@ -76,4 +76,14 @@ namespace IonEngine::Events {
     };
 }
 
+namespace IonEngine {
+
+    using MouseEvent = IonEngine::Events::MouseEvent;
+    using MouseButtonPressedEvent = IonEngine::Events::MouseButtonPressedEvent;
+    using MouseButtonReleasedEvent = IonEngine::Events::MouseButtonReleasedEvent;
+    using MouseScrolledEvent = IonEngine::Events::MouseScrolledEvent;
+    using MouseMovedEvent = IonEngine::Events::MouseMovedEvent;
+
+}
+
 #endif // IONENGINE_EVENTS_INPUTEVENTS_MOUSEEVENTS_H

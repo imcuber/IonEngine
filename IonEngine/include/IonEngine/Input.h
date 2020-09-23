@@ -186,4 +186,13 @@ namespace IonEngine::Input {
     };
 }
 
+namespace IonEngine {
+
+    using InputState = IonEngine::Input::InputState;
+    using Key = IonEngine::Input::Key;
+    using MouseButton = IonEngine::Input::MouseButton;
+    using MousePosition = IonEngine::Input::MousePosition;
+
+}
+
 #endif // IONENGINE_INPUT_H

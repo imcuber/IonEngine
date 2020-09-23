@@ -19,4 +19,10 @@ namespace IonEngine::Utility {
 
 }
 
+namespace IonEngine {
+
+    using Clock = IonEngine::Utility::Clock;
+
+}
+
 #endif // IONENGINE_UTILITY_CLOCK_H
