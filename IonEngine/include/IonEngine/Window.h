@@ -2,6 +2,7 @@
 #define IONENGINE_WINDOW_H
 
 #include <IonEngine/Events.h>
+#include <IonEngine/Grapics.h>
 
 #include <functional>
 #include <string>
@@ -27,7 +28,7 @@ namespace IonEngine {
         using EventCallback = std::function<bool(IonEngine::Events::Event&)>;
         
     public:
-        static std::unique_ptr<Window> createWindow(const WindowProps& props = WindowProps{});
+        static std::unique_ptr<Window> create(const WindowProps& props = WindowProps{});
 
         virtual ~Window() noexcept = default;
 
@@ -37,6 +38,7 @@ namespace IonEngine {
         EventCallback setEventCallback(const EventCallback& callback) noexcept;
 
         virtual void onUpdate();
+        virtual void onRender();
 
         virtual void* getNativeHandler() const noexcept;
 
@@ -46,6 +48,8 @@ namespace IonEngine {
     protected:
         WindowProps m_props = WindowProps{};
         EventCallback m_eventCallback = [](IonEngine::Events::Event&) { return false; };
+
+        std::unique_ptr<Graphics::Context> m_context;
     };
 
 }

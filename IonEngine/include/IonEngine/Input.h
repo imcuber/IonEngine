@@ -177,12 +177,18 @@ namespace IonEngine::Input {
         static bool isMouseButtonPressed(MouseButton button) noexcept;
         static MousePosition getMousePosition() noexcept;
     
-    private:
+    protected:
+        virtual bool isKeyPressedImpl(Key key) noexcept = 0;
+        virtual bool isMouseButtonPressedImpl(MouseButton button) noexcept = 0;
+        virtual MousePosition getMousePositionImpl() noexcept = 0;
+
+    protected:
         InputState() = default;
 
-    private:
+    protected:
         friend class IonEngine::Window;
         static IonEngine::Window* m_window;
+        static std::unique_ptr<InputState> m_instance;
     };
 }
 

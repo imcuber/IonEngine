@@ -15,6 +15,13 @@
 
 #define ION_BIT(x) (1u << (x))
 
-#define ION_CORE_ASSERT(x, msg) do { if(!(x)) { ION_CORE_LOG_ERROR("Assertion failed ({}): {}", #x, msg); std::abort(); } } while(0)
+#define ION_EVALUATE__(...) __VA_ARGS__
+#define ION_CORE_ASSERT(x, ...)                                                                                     \
+    do {                                                                                                            \
+        if(!(x)) {                                                                                                  \
+            ION_CORE_LOG_ERROR("Assertion failed ({}): {}", #x, fmt::format(ION_EVALUATE__(__VA_ARGS__)));          \
+            std::abort();                                                                                           \
+        }                                                                                                           \
+    } while(0)
 
 #endif // IONENGINE_CORE_H

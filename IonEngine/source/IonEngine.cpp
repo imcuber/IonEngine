@@ -2,12 +2,9 @@
 
 int main(int argc, char* argv[])
 {
-    auto application = getApplication();
-    application->run(argc, argv);
-    delete application;
+    auto application = getApplication(argc, argv);
+    
+    application->run();
+    
     return 0;
-}
-
-namespace IonEngine {
-
 }

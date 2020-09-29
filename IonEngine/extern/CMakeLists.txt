@@ -25,8 +25,7 @@ set(IMGUI_SOURCE
 	"${CMAKE_CURRENT_LIST_DIR}/imgui/examples/imgui_impl_glfw.cpp"
 )
 add_library(imgui STATIC ${IMGUI_SOURCE})
-target_include_directories(imgui PUBLIC "${CMAKE_CURRENT_LIST_DIR}")
-target_include_directories(imgui PRIVATE "${CMAKE_CURRENT_LIST_DIR}/imgui")
+target_include_directories(imgui PUBLIC "${CMAKE_CURRENT_LIST_DIR}/imgui")
 target_link_libraries(imgui PRIVATE glad glfw)
 
 # assimp

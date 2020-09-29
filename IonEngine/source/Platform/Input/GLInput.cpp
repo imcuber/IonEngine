@@ -1,12 +1,10 @@
 #include <IonEngine.h>
 
-#include <IonEngine/extern/OpenGL.h>
+#include <glfw/glfw3.h>
 
-namespace IonEngine::Input {
+namespace IonEngine::Platform {
 
-    IonEngine::Window* IonEngine::Input::InputState::m_window = nullptr;
-
-    bool InputState::isKeyPressed(Key key) noexcept
+    bool GLInput::isKeyPressedImpl(Key key) noexcept
     {
         if(!m_window) {
             ION_CORE_LOG_WARN("Input possing without window, returning false");
@@ -21,7 +19,7 @@ namespace IonEngine::Input {
         return false;
     }
 
-    bool InputState::isMouseButtonPressed(MouseButton button) noexcept
+    bool GLInput::isMouseButtonPressedImpl(MouseButton button) noexcept
     {
         if(!m_window) {
             ION_CORE_LOG_WARN("Input possing without window, returning false");
@@ -36,7 +34,7 @@ namespace IonEngine::Input {
         return false;
     }
 
-    MousePosition InputState::getMousePosition() noexcept
+    MousePosition GLInput::getMousePositionImpl() noexcept
     {
         if(!m_window) {
             ION_CORE_LOG_WARN("Input possing without window, returning 0/0");

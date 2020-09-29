@@ -67,7 +67,7 @@ namespace IonEngine {
     using ApplicationEvent = IonEngine::Events::ApplicationEvent;
     using AppStartedEvent = IonEngine::Events::AppStartedEvent;
     using AppStoppedEvent = IonEngine::Events::AppStoppedEvent;
-    using AppTickEventEvent = IonEngine::Events::AppTickEvent;
+    using AppTickEvent = IonEngine::Events::AppTickEvent;
     using AppUpdatedEvent = IonEngine::Events::AppUpdatedEvent;
     using AppRenderedEvent = IonEngine::Events::AppRenderedEvent;
 
